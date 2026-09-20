@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linen apron – Fernhill Goods</title>
+    <link rel="stylesheet" href="/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="skip-link" href="#content">Skip to main content</a>
+      <div class="header-bar">
+        <a class="logo" href="/">Fernhill Goods</a>
+        <div class="header-actions">
+        <button type="button" class="icon-btn" id="header-search-btn" aria-expanded="false" aria-controls="header-search"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+          <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        </div>
+      </div>
+      <form id="header-search" class="header-search" role="search" action="/products" method="get" hidden>
+        <label for="header-search-q">Search products</label>
+        <input id="header-search-q" name="q" type="search">
+        <button type="submit" class="btn btn-light">Search</button>
+      </form>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" hidden>
+        <ul>
+          <li><a href="/products">Shop all</a></li>
+          <li><a href="/sale">Sale</a></li>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/cart">Cart</a></li>
+          <li><a href="/login">Account</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="content" class="content" tabindex="-1">
+      <h1>Linen apron</h1>
+      <img src="/img/product-3.svg" alt="Natural linen apron with a front pocket" width="240" height="180">
+      <p class="price">32 EUR</p>
+      <p>Washed European linen with adjustable straps. One pocket, two sizes.</p>
+      <p>
+        <button type="button" id="size-guide-open" class="btn" aria-haspopup="dialog">Size guide</button>
+      </p>
+      <h2>Details</h2>
+      <ul>
+        <li>100% linen, 245 g/m²</li>
+        <li>Machine wash at 40 °C</li>
+      </ul>
+      <div id="size-guide-backdrop" class="backdrop" hidden></div>
+      <div id="size-guide-dialog" class="dialog" role="dialog" aria-modal="true" aria-labelledby="size-guide-title" hidden>
+        <div class="dialog-head">
+          <h2 id="size-guide-title">Size guide</h2>
+          <button type="button" id="size-guide-close" class="icon-btn icon-btn-dark"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        </div>
+        <table>
+          <caption>Apron sizes in centimetres</caption>
+          <thead><tr><th scope="col">Size</th><th scope="col">Length</th><th scope="col">Width</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Regular</th><td>85</td><td>70</td></tr>
+            <tr><th scope="row">Long</th><td>95</td><td>75</td></tr>
+          </tbody>
+        </table>
+        <p><a id="size-guide-shipping" href="/shipping">Shipping details</a></p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="/shipping">Shipping</a></li>
+          <li><a href="/returns">Returns</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Fernhill Goods. Patchwright fixture site.</p>
+    </footer>
+    <script src="/site.js"></script>
+  </body>
+</html>

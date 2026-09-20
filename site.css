@@ -1,0 +1,335 @@
+/* Fernhill Goods – Patchwright broken-site fixture. Ground truth: see ../EXPECTED.json. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1f2328;
+  background: #ffffff;
+}
+a {
+  color: #0b57a4;
+}
+:focus-visible {
+  outline: 3px solid #c2410c;
+  outline-offset: 2px;
+}
+
+/* header */
+.site-header {
+  background: #12355b;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+}
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.logo {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #ffffff;
+  color: #12355b;
+  padding: 0.5rem 1rem;
+}
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+.nav-toggle {
+  background: #ffffff;
+  color: #12355b;
+  border: 0;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.icon-btn-dark {
+  color: #12355b;
+  border-color: #12355b;
+}
+.primary-nav ul,
+.site-footer ul {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.primary-nav a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+.nav-icon-link {
+  min-width: 2.5rem;
+}
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.header-search[hidden],
+.primary-nav[hidden] {
+  display: none;
+}
+.header-search input {
+  font: inherit;
+  padding: 0.4rem 0.5rem;
+}
+
+/* content */
+.content {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+.content:focus {
+  outline: none;
+}
+.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.muted-note {
+  color: #9a9a9a; /* fixture defect: 2.8:1 on white */
+}
+.cards {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 1rem;
+}
+.card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.card h2 {
+  font-size: 1.1rem;
+  margin: 0.75rem 0 0.25rem;
+}
+.card h2 a {
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+.price {
+  font-weight: 600;
+}
+.btn {
+  display: inline-block;
+  background: #12355b;
+  color: #ffffff;
+  border: 0;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.6rem 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-light {
+  background: #ffffff;
+  color: #12355b;
+}
+.tile-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #0b57a4;
+  border-radius: 4px;
+}
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+th,
+td {
+  border: 1px solid #d0d7de;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+/* forms */
+.form {
+  max-width: 28rem;
+}
+.field {
+  margin-bottom: 1rem;
+}
+.field label,
+.field .field-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.field input,
+.field select {
+  font: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #57606a;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #1f2328;
+}
+/* fixture defect: focus indication removed and not replaced */
+#forgot-link:focus,
+#forgot-link:focus-visible {
+  outline: none;
+}
+
+/* mouse-only dropdown (fixture defect) */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.dropdown-toggle {
+  border: 1px solid #57606a;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+.dropdown-list {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 100%;
+  min-width: 100%;
+  margin: 0.25rem 0 0;
+  padding: 0.25rem 0;
+  list-style: none;
+  background: #ffffff;
+  border: 1px solid #57606a;
+  border-radius: 4px;
+}
+.dropdown-list[hidden] {
+  display: none;
+}
+.dropdown-list li {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.dropdown-list li:hover {
+  background: #eaeef2;
+}
+
+/* dialog */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 10;
+}
+.dialog {
+  position: fixed;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(30rem, 92vw);
+  background: #ffffff;
+  color: #1f2328;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.dialog[hidden],
+.backdrop[hidden] {
+  display: none;
+}
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.dialog-head h2 {
+  margin: 0;
+}
+
+/* carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+.slide {
+  flex: 1;
+}
+.slide h2 {
+  margin-top: 0;
+}
+
+/* footer */
+.site-footer {
+  background: #f3f4f6;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+.site-footer ul {
+  margin-top: 0;
+}
+.site-footer a {
+  display: inline-block;
+  padding: 0.5rem 0;
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your cart – Fernhill Goods</title>
+    <link rel="stylesheet" href="/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="skip-link" href="#content">Skip to main content</a>
+      <div class="header-bar">
+        <a class="logo" href="/">Fernhill Goods</a>
+        <div class="header-actions">
+        <button type="button" class="icon-btn" id="header-search-btn" aria-expanded="false" aria-controls="header-search"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+          <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        </div>
+      </div>
+      <form id="header-search" class="header-search" role="search" action="/products" method="get" hidden>
+        <label for="header-search-q">Search products</label>
+        <input id="header-search-q" name="q" type="search">
+        <button type="submit" class="btn btn-light">Search</button>
+      </form>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" hidden>
+        <ul>
+          <li><a href="/products">Shop all</a></li>
+          <li><a href="/sale">Sale</a></li>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/cart">Cart</a></li>
+          <li><a href="/login">Account</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="content" class="content" tabindex="-1">
+      <h1>Your cart</h1>
+      <table>
+        <caption>Items in your cart</caption>
+        <thead><tr><th scope="col">Item</th><th scope="col">Quantity</th><th scope="col">Price</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Linen apron</th><td>1</td><td>32 EUR</td></tr>
+          <tr><th scope="row">Beech hand trowel</th><td>2</td><td>36 EUR</td></tr>
+        </tbody>
+      </table>
+      <p id="cart-hint" class="muted-note">Prices include VAT. Delivery is calculated at the next step.</p>
+      <p><a class="btn" href="/checkout">Continue to delivery details</a></p>
+    </main>
+    <footer class="site-footer">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="/shipping">Shipping</a></li>
+          <li><a href="/returns">Returns</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Fernhill Goods. Patchwright fixture site.</p>
+    </footer>
+    <script src="/site.js"></script>
+  </body>
+</html>
