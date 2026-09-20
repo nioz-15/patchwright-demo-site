@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
-Sitemap: http://localhost:4100/sitemap.xml
+Sitemap: https://nioz-15.github.io/patchwright-demo-site/sitemap.xml
